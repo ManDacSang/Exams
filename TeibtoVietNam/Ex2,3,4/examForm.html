@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./functionEx4.js" defer></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="container">
+        <form id="examResult" method="get" action="examResult.html">
+          <!-- header -->
+          <div class="form_row">
+            <img src="./teibo.png" alt="" srcset="" />
+            <h1>Survey Form</h1>
+          </div>
+          <!-- Name -->
+          <div class="form_row">
+            <label for="fname" class="form__label">First Name </label>
+            <div class="form__input">
+              <input id="fname" type="text" name="fname" />
+            </div>
+          </div>
+          <div class="form_row">
+            <label for="lname" class="form__label">Last Name </label>
+            <div class="form__input">
+              <input id="lname" type="text" name="lname" />
+            </div>
+          </div>
+          <!-- Sex -->
+          <div class="form_row">
+            <label for="sex" class="form__label">Sex </label>
+            <input
+              type="radio"
+              checked="checked"
+              name="sex"
+              id="male"
+              value="male"
+            />
+            <label for="male" class="minWidth1400">Male</label>
+            <input type="radio" name="sex" id="female" value="female" />
+            <label for="female">Female</label>
+          </div>
+          <!-- Email -->
+          <div class="form_row">
+            <label for="email" class="form__label">Email </label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="ABC@gmail.com"
+            />
+          </div>
+          <!-- Phone -->
+          <div class="form_row">
+            <label for="phone" class="form__label">Phone </label>
+            <input type="number" name="phone" id="phone" />
+          </div>
+          <div class="form_row">
+            <label for="address" class="form__label">Address </label>
+            <textarea
+              name="address"
+              id="address"
+              cols="20"
+              rows="4"
+              class="form__input"
+            ></textarea>
+          </div>
+          <!-- Country -->
+          <div class="form_row">
+            <label for="country" class="form__label">Country </label>
+            <select name="country" id="country">
+              <option value="Viet Nam">Viet Nam</option>
+              <option value="Thai Lan">Thai Lan</option>
+              <option value="America">America</option>
+              <option value="Brazil">Brazil</option>
+            </select>
+          </div>
+
+          <!-- Language -->
+          <div class="form_row">
+            <label for="language" class="form__label">Language </label>
+            <input
+              type="radio"
+              checked="checked"
+              name="language"
+              id="english"
+              value="english"
+            />
+            <label for="english" class="minWidth1400">English</label>
+            <input
+              type="radio"
+              name="language"
+              id="nonEnglish"
+              value="nonEnglish"
+            />
+            <label for="nonEnglish">Non English</label>
+          </div>
+          <!-- Acceptance -->
+          <div class="form_row">
+            <label for="acceptance" class="form__label"
+              >Acceptance (required)
+            </label>
+            <input
+              type="checkbox"
+              name="acceptance"
+              id="acceptance"
+              value="acceptance"
+              onclick="checkAcceptance()"
+              checked="true"
+            />
+          </div>
+          <!-- button -->
+          <div class="form_row">
+            <input
+              id="btnSubmit"
+              type="button"
+              class="btnSubmit"
+              onclick="submitForm()"
+              value="submit"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="messagePopup">
+      <div class="formPopup" id="popupForm">
+        <form action="/action_page.php" class="formContainer">
+          <h2>Error Message</h2>
+          <div id="errMessage"></div>
+          <button type="button" class="btn cancel" onclick="closeForm()">
+            Close
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
